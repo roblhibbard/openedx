@@ -427,9 +427,9 @@ DEFAULT_TEMPLATE_ENGINE = TEMPLATES[0]
 ##############################################################################
 
 EDX_ROOT_URL = ''
-LOGIN_REDIRECT_URL = EDX_ROOT_URL + '/home/'
-LOGIN_URL = reverse_lazy('login_redirect_to_lms')
-
+LOGIN_REDIRECT_URL = EDX_ROOT_URL + '/signin/'
+#LOGIN_URL = reverse_lazy('login_redirect_to_lms')
+LOGIN_URL =EDX_ROOT_URL + '/signin'
 # use the ratelimit backend to prevent brute force attacks
 AUTHENTICATION_BACKENDS = [
     'rules.permissions.ObjectPermissionBackend',
@@ -1174,6 +1174,9 @@ INSTALLED_APPS = [
     'openedx.features.course_duration_limits',
     'openedx.features.content_type_gating',
     'experiments',
+
+    # Jupyter Notebook Graded XBlock
+    'xblock_jupyter_graded',
 ]
 
 

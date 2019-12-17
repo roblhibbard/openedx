@@ -51,6 +51,7 @@ from staticbook import views as staticbook_views
 from student import views as student_views
 from track import views as track_views
 from util import views as util_views
+#from openassessment.fileupload.urls import urlpatterns as oraurlpatterns
 
 if settings.DEBUG or settings.FEATURES.get('ENABLE_DJANGO_ADMIN_SITE'):
     django_autodiscover()
@@ -1048,3 +1049,9 @@ urlpatterns += [
 ]
 
 urlpatterns.extend(plugin_urls.get_patterns(plugin_constants.ProjectType.LMS))
+
+# Jupyter Graded XBlock Endpoints
+urlpatterns += (
+    url(r'^api/jupyter_graded/', include('xblock_jupyter_graded.rest.urls', namespace='xblock_jupyter_graded')),
+)
+#urlpatterns+= oraurlpatterns

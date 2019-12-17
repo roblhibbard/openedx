@@ -119,6 +119,12 @@ DEFAULT_MOBILE_AVAILABLE = ENV_TOKENS.get(
 MEDIA_ROOT = ENV_TOKENS.get('MEDIA_ROOT', MEDIA_ROOT)
 MEDIA_URL = ENV_TOKENS.get('MEDIA_URL', MEDIA_URL)
 
+# create folders if necessary
+#import os
+#for folder in [LOG_DIR, MEDIA_ROOT, STATIC_ROOT_BASE]:
+#    if not os.path.exists(folder):
+#        os.makedirs(folder)
+
 # GITHUB_REPO_ROOT is the base directory
 # for course data
 GITHUB_REPO_ROOT = ENV_TOKENS.get('GITHUB_REPO_ROOT', GITHUB_REPO_ROOT)

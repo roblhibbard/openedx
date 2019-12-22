@@ -148,7 +148,7 @@ FEATURES = {
 
     # Give a UI to show a student's submission history in a problem by the
     # Staff Debug tool.
-    'ENABLE_STUDENT_HISTORY_VIEW': True,
+    'ENABLE_STUDENT_HISTORY_VIEW': False,
 
     # Provide a UI to allow users to submit feedback from the LMS (left-hand help modal)
     'ENABLE_FEEDBACK_SUBMISSION': False,
@@ -2293,6 +2293,12 @@ INSTALLED_APPS = [
 
     # edx-drf-extensions
     'csrf.apps.CsrfAppConfig',  # Enables frontend apps to retrieve CSRF tokens.
+
+    # Jupyter Notebook Graded XBlock
+    'xblock_jupyter_graded',
+
+    # Colab XBlock
+    'colab_xblock',
 ]
 
 ######################### CSRF #########################################

@@ -148,7 +148,7 @@ FEATURES = {
 
     # Give a UI to show a student's submission history in a problem by the
     # Staff Debug tool.
-    'ENABLE_STUDENT_HISTORY_VIEW': False,
+    'ENABLE_STUDENT_HISTORY_VIEW': True,
 
     # Provide a UI to allow users to submit feedback from the LMS (left-hand help modal)
     'ENABLE_FEEDBACK_SUBMISSION': False,
